@@ -1,0 +1,19 @@
+<h1 id="to-be-run-in-a-play-with-docker-pwd-instance">To be run in a Play With Docker (PWD) instance</h1>
+<h2 id="steps">Steps</h2>
+<h3 id="1-run-the-container-in-background">1. Run the container in background</h3>
+<blockquote>
+<p>docker run -it -d -p 8888:8888 -p 8000:8000 -p 5000:5000 --name miniconda pradhyumna85/halminiconda4interviews bash</p>
+</blockquote>
+<h3 id="2-check-running-containers-and-their-status">2. Check running containers and their status</h3>
+<blockquote>
+<p>docker ps -a</p>
+</blockquote>
+<h3 id="3-access-shell">3. Access shell</h3>
+<blockquote>
+<p>docker exec -it miniconda bash</p>
+</blockquote>
+<h3 id="4-run-jupyter-lab">4. Run jupyter lab</h3>
+<blockquote>
+<p>jupyter lab --notebook-dir=/opt/notebooks --ip=&#39;*&#39; --port=8888 --no-browser --allow-root</p>
+</blockquote>
+<h3 id="then-forward-port-8888-from-pwd-and-then-use-the-token-displayed-in-the-terminal-select-token-and-ctrl-insert-to-copy-">Then forward port 8888 from PWD and then use the token displayed in the terminal (select token and ctrl + insert to copy)</h3>
